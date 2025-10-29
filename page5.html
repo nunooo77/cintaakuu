@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Memories</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="container page5">
+        <h1>Our Beautiful Memories</h1>
+        <p>photos of Anindya Nur Shadrina Hidayat...</p>
+        <div class="memories-gallery">
+            <img src="WhatsApp Image 2025-09-19 at 21.32.24_8cae2c8d.jpg" alt="Memory 1" />
+            <img src="WhatsApp Image 2025-09-19 at 21.32.24_9fc7a32f.jpg" alt="Memory 2" />
+            <img src="WhatsApp Image 2025-09-19 at 21.32.24_9989e471.jpg" alt="Memory 3" />
+            <img src="WhatsApp Image 2025-09-19 at 21.32.24_866996bb.jpg" alt="Memory 4" />
+            <img src="WhatsApp Image 2025-09-19 at 21.32.24_b7d89717.jpg" alt="Memory 5" />
+        </div>
+        <p>short video for you...</p>
+        <video controls class="memory-video">
+            <source src="WhatsApp Video 2025-10-29 at 22.23.29_1f7d5cb1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button id="continueBtn">Continue to Final Page</button>
+    </div>
+    <script src="js/script.js"></script>
+    <script>
+        document.getElementById('continueBtn').addEventListener('click', () => {
+            const params = new URLSearchParams(window.location.search);
+            window.location.href = 'page6.html?' + params.toString();
+        });
+    </script>
+</body>
+</html>

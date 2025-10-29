@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Forever Together</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+        <div class="container page6">
+            <h1>Forever Together</h1>
+            <p>Sayangku, setiap momen bersamamu adalah momen yang sangat bahagia dan sangat berharga untukku. Selamat ulang tahun yang ke 20 cintaku cantikku, sehat selalu dan panjang umur yaa bayii besarkuu kesayangankuu, semoga rezekinya dilancarkan dan semua urusannya semua dipermudahkan yaa sayanggkuu cintaakuu cantikkuu. maaff yaa cayngg akuu baruu ngasih ini udah lewat 1 bulan lebih coalnaa akuu lagii tidak kreatif kemarin sebenarnya akuu sudah buat dari lama tapii masih jelek amay terus akuu udaa coba kembangin tapii belum bagus akuu dari kemarin kemarin mikir mikir ide bagusnya gimana hihihihihi..... HAPPY BIRTHDAY BAYII BESARKUU ANINDYA NUR SHADRINA HIDAYAT!!!!!🥳🥳🥳🥳🥳🥳🥰🥰🥰🥰🥰🥰🥰🥰🥰🥰🥰❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️</p>
+            <div class="final-message">
+                <p>With all my heart,</p>
+                <p>Your Loving Partner</p>
+            </div>
+            <img src="images/her.jpg" alt="Final Memory" class="final-image" />
+            <a id="whatsappBtn" href="https://wa.me/62895412166611" target="_blank" class="whatsapp-btn">Chat with Me on WhatsApp ❤️</a>
+        </div>
+    <script src="js/script.js"></script>
+    <script>
+        function getScheduledDateInfo() {
+            const params = new URLSearchParams(window.location.search);
+            const date = params.get('date');
+            const time = params.get('time');
+            const image = params.get('image');
+            return { date, time, image };
+        }
+
+        function generateWhatsAppMessage(dateInfo) {
+            let message = "Happy Birthday! I can't wait for our date. ";
+            if (dateInfo.date && dateInfo.time) {
+                message += `Scheduled for ${dateInfo.date} at ${dateInfo.time}. `;
+            }
+            if (dateInfo.image) {
+                message += `Looking forward to our ${dateInfo.image} date! ❤️`;
+            }
+            return encodeURIComponent(message);
+        }
+
+        function updateWhatsAppLink() {
+            const dateInfo = getScheduledDateInfo();
+            const message = generateWhatsAppMessage(dateInfo);
+            const whatsappBtn = document.getElementById('whatsappBtn');
+            whatsappBtn.href = `https://wa.me/62895412166611?text=${message}`;
+        }
+
+        updateWhatsAppLink();
+    </script>
+</body>
+</html>
