@@ -1,0 +1,282 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ffe6f0, #ffb3d9);
+    color: #b30059;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff0f6;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(179, 0, 89, 0.3);
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #cc0066;
+}
+
+button {
+    background-color: #cc0066;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #e60073;
+}
+
+img.her-image {
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid #cc0066;
+    margin-bottom: 20px;
+}
+
+.pictures img {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    border-radius: 15px;
+    border: 3px solid #cc0066;
+    object-fit: cover;
+}
+
+fieldset {
+    border: 2px solid #cc0066;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: #cc0066;
+    font-size: 1.2em;
+}
+
+.choice-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    border: 3px solid transparent;
+    cursor: pointer;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+input[type="radio"]:checked + .choice-image {
+    border-color: #cc0066;
+}
+
+.date-card {
+    background: #ffe6f0;
+    border: 3px solid #cc0066;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+.date-image {
+    width: 200px;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 15px;
+    border: 3px solid #cc0066;
+}
+
+/* Hearts trail animation */
+.heart {
+    position: fixed;
+    pointer-events: none;
+    font-size: 20px;
+    color: #ff66b2;
+    animation: floatUp 1s forwards;
+    user-select: none;
+    z-index: 9999;
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px) scale(1.5);
+    }
+}
+
+/* Fade-in animation for containers */
+.container {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button bounce animation */
+button {
+    animation: bounceIn 0.6s ease-out;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Hover effects for images */
+img.her-image:hover, .pictures img:hover, .choice-image:hover, .date-image:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 20px rgba(204, 0, 102, 0.5);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    img.her-image {
+        width: 200px;
+    }
+
+    .pictures img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .choice-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .date-image {
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .pictures img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .choice-image {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Styles for new pages */
+.memories-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.memories-gallery img {
+    width: 120px;
+    height: 120px;
+    border-radius: 15px;
+    border: 3px solid #cc0066;
+    object-fit: cover;
+}
+
+.memory-video {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px 0;
+    border-radius: 15px;
+    border: 3px solid #cc0066;
+}
+
+.final-message {
+    font-size: 1.2em;
+    margin: 20px 0;
+    font-style: italic;
+}
+
+.final-image {
+    width: 200px;
+    height: auto;
+    border-radius: 15px;
+    border: 5px solid #cc0066;
+    margin: 20px 0;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1.1em;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E;
+    transform: scale(1.05);
+}

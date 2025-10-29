@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Schedule Date</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="container page3">
+        <h1>Schedule Our Date</h1>
+        <form id="dateForm">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required />
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required />
+
+            <fieldset>
+                <legend>Choose an image for our date:</legend>
+                <label>
+                    <input type="radio" name="image" value="Museum" required />
+                    <img src="image copy.png" alt="Museum" class="choice-image" />
+                </label>
+                <label>
+                    <input type="radio" name="image" value="City Light" />
+                    <img src="image.png" alt="City Light" class="choice-image" />
+                </label>
+                <label>
+                    <input type="radio" name="image" value="movie" />
+                    <img src="WhatsApp Image 2025-10-29 at 10.07.15_80ef3024.jpg" alt="Movie" class="choice-image" />
+                </label>
+            </fieldset>
+
+            <button type="submit">Continue</button>
+        </form>
+    </div>
+    <script src="js/script.js"></script>
+    <script>
+        document.getElementById('dateForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const date = this.date.value;
+            const time = this.time.value;
+            const image = this.image.value;
+            const params = new URLSearchParams({ date, time, image });
+            window.location.href = 'page4.html?' + params.toString();
+        });
+    </script>
+</body>
+</html>
